@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <title>웹페이지 쇼핑몰</title>
+  <link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+  <style>
+    * {
+      font-family: 'Gloria Hallelujah', cursive;
+      font-family: 'Nanum Pen Script', cursive;
+      font-size: 20px;
+    }
+
+    .myitem {
+        width: 500px;
+        height: 500px;
+        background-image: url(https://i.pinimg.com/originals/82/e7/f3/82e7f3ef9264d8e8b17fb0b8cbc0aab8.jpg);
+        background-size: cover;
+        background-position: center;
+       border-radius: 10px;
+      }
+
+
+    }
+
+    .desc {
+      width: 500;
+      margin-top: 20;
+      margin-bottom: 20;
+    }
+
+    .price {
+      font-size: 30px;
+    }
+
+    .orderbox {
+      width: 500px;
+    }
+
+    .mybtn {
+      width: 200;
+      margin: auto;
+      padding-top:5px;
+      padding-bottom:5px;
+      display: block;
+      font-size: 25px;
+    }
+
+    .wrap {
+      margin: auto;
+      width: 500px;
+
+    }
+  </style>
+  <script>
+    function order() {
+        let name=$('order-name').val();
+        let count=$('order-count').val();
+        let address=$('order-address').val();
+        let phone=$('order-phone').val();
+        console.log(name, count, address, phone)
+    }
+
+  </script>
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="myitem">
+    </div>
+    <div class="desc">
+      <h1> 아메리카노 팝니다. <span class="price">가격 : 2000원</span> </h1>
+      <h2>아메리카노 1+1 행사를 합니다. </h2>
+    </div>
+    <div class="orderbox">
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="inputGroup-sizing-default">주문자이름</span>
+        </div>
+        <input id="order-name" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+      </div>
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <label class="input-group-text" for="inputGroupSelect01">수량</label>
+        </div>
+        <select id="order-count" class="custom-select">
+          <option selected>--수량을 선택하세요--</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+        </select>
+      </div>
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="inputGroup-sizing-default">주소</span>
+        </div>
+        <input id="order-address" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+      </div>
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="inputGroup-sizing-default">전화번호</span>
+        </div>
+        <input id="order-phone" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+      </div>
+      <button onclick="order()" type="button" class="btn btn-dark mybtn">주문하기</button>
+    </div>
+  </div>
+</body>
+
+</html>
