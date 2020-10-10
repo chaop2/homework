@@ -64,9 +64,8 @@
   </style>
   <script>
     function order() {
-      alert('주문이 완료되었습니다')
+      alert('주문이 완료되었습니다!');
     }
-
   </script>
 </head>
 
@@ -83,13 +82,13 @@
         <div class="input-group-prepend">
           <span class="input-group-text" id="inputGroup-sizing-default">주문자이름</span>
         </div>
-        <input id="order-name type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+        <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
       </div>
       <div class="input-group mb-3">
         <div class="input-group-prepend">
           <label class="input-group-text" for="inputGroupSelect01">수량</label>
         </div>
-        <select id="order-count" class="custom-select">
+        <select class="custom-select" id="inputGroupSelect01">
           <option selected>수량을 선택하세요..</option>
           <option value="1">One</option>
           <option value="2">Two</option>
@@ -100,13 +99,13 @@
         <div class="input-group-prepend">
           <span class="input-group-text" id="inputGroup-sizing-default">주소</span>
         </div>
-        <input id="order-address" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+        <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
       </div>
       <div class="input-group mb-3">
         <div class="input-group-prepend">
           <span class="input-group-text" id="inputGroup-sizing-default">전화번호</span>
         </div>
-        <input id="order-phone" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+        <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
       </div>
       <button onclick="order()" type="button" class="btn btn-dark mybtn">주문하기</button>
     </div>
